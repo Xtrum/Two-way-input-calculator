@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  inline-size: 100vw;
+  block-size: 100vh;
+  font-size: 12px;
+  background-color: #7357d6da;
+}
+
+.container {
+  display: grid;
+  place-content: center;
+  margin: auto;
+  grid-template-columns: repeat(4, 4.4rem);
+  grid-template-rows: minmax(4.8rem, auto) repeat(7, 4.4rem);
+}
+
+.output {
+  grid-column: 1 /-1;
+  display: flex;
+  flex-direction: column;
+  background-color: #222;
+  color: white;
+}
+
+.display {
+  display: flex;
+  padding: 0.8rem;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.previous {
+  font-size: 1.2rem;
+  color: #fffc;
+}
+
+.current {
+  font-size: 1.8rem;
+}
+
+button {
+  background-color: #dfbfbfee;
+  border: 1px solid white;
+  font-size: 1.5rem;
+  outline: none;
+}
+
+.sign:hover {
+  background-color: red;
+  color: white;
+}
+
+.number:hover,
+.CE:hover,
+.C:hover {
+  background-color: rgba(255, 255, 255, 0.849);
+}
+
+.span-two {
+  grid-column: span 2;
+}
